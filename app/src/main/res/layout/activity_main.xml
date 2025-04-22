@@ -1,19 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="24dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center_vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart Login"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Condition 1: Magic Word -->
+        <include layout="@layout/condition_row"
+            android:id="@+id/row_magic_word"
+
+             />
+        <!-- Condition 2: Brightness -->
+        <include layout="@layout/condition_row"
+            android:id="@+id/row_brightness"
+             />
+        <!-- Condition 3: Proximity -->
+        <include layout="@layout/condition_row"
+            android:id="@+id/row_proximity"
+             />
+        <!-- Condition 4: Photo Taken -->
+        <include layout="@layout/condition_row"
+            android:id="@+id/row_photo"
+             />
+        <!-- Condition 5: Volume Pattern -->
+        <include layout="@layout/condition_row"
+            android:id="@+id/row_volume"
+             />
+
+        <!-- Magic Word Input -->
+        <EditText
+            android:id="@+id/magicInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter magic word"
+            android:layout_marginTop="8dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:layout_marginTop="24dp"
+            android:enabled="false" />
+
+        <!-- Hint Button -->
+        <Button
+            android:id="@+id/hintButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hint"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Hint Text -->
+        <TextView
+            android:id="@+id/hintText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>
