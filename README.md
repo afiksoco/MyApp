@@ -18,3 +18,4 @@ Built fully in Kotlin using ViewBinding, Permissions API, and SensorManager.
 
 https://github.com/user-attachments/assets/abdb0334-f106-428d-800c-b5aa5e5cd14a
 
+לבודק התרגילים, גיא אישר לי להגיש באיחור, שמתי  בתיבה בזמן ואמר שאני יכול לעשות קומיט באיחור. תודה !
